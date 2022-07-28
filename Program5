@@ -1,0 +1,33 @@
+import java.util.*; 
+public class PNC {
+    static int fact(int n){
+        int c=1;
+        if (n<0){
+            System.out.println("Error");
+            return -1;
+        }
+        else{
+            for(int i=n; i>0; i--){
+                c=c*i;
+            }
+            return c;
+        }
+    }
+    static void NPR(int n, int r){
+        System.out.println("Permutations of given numbers are :");
+        System.out.println(fact(n)/fact(n-r)); 
+    } 
+    static void NCR(int n, int r){
+        System.out.println("Combinations of given numbers are :");
+        System.out.println(fact(n)/(fact(r)*fact(n-r))); 
+    } 
+public static void main(String[] args) {
+Scanner sc= new Scanner(System.in);
+System.out.println("Enter value of n");
+int n= sc.nextInt(); 
+System.out.println("Enter value of r");
+int r= sc.nextInt();
+NPR(n,r);
+NCR(n,r);
+}
+}
