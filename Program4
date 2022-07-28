@@ -1,0 +1,19 @@
+import java.util.*;
+public class Strpalindrome {
+     public static void main(String[] args) {
+        System.out.println("Enter the string");
+        Scanner sc= new Scanner(System.in);
+        String s= sc.nextLine(); 
+        char[] str=new char[s.length()];
+        for(int i=0;i<s.length();i++){
+            str[i]=s.charAt(s.length()-i-1);
+        }
+        String str1=String.valueOf(str);
+        if(str1.equals(s)){
+            System.out.println("it is palindrome");
+        }
+        else{
+            System.out.println("it is not a palindrome");
+        }
+}
+}
